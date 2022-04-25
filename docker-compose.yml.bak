@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  cad-pessoa:
+    image: ${DOCKER_REGISTRY-}cadpessoa
+    depends_on:
+    - sqldata
+    build:
+      context: .
+      dockerfile: src/Cadastro_De_Pessoas.API/Dockerfile
+    environment:
+      DBConnection: "Server=DESKTOP-52GBC2A;Database=CadastroDB;Trusted_Connection=True"
+
+
+  sqldata:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "5434:1433"

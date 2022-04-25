@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Cadastro_De_Pessoas.INFRA\Cadastro_De_Pessoas.INFRA.csproj" />
+    <ProjectReference Include="..\Cadastro_De_Pessoas.Models\Cadastro_De_Pessoas.DOMAIN.csproj" />
+  </ItemGroup>
+
+</Project>
